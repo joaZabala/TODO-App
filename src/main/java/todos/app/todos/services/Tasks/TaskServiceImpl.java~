@@ -126,7 +126,7 @@ public class TaskServiceImpl implements TaskService {
             taskEntity.setDueDate(taskRequest.getDueDate());
             taskEntity.setStartDate(LocalDateTime.now());
             taskEntity = taskRepository.save(taskEntity);
-
+            
             TaskDTO taskDTO = modelMapper.map(taskEntity, TaskDTO.class);
             taskDTO.setUserDTO(modelMapper.map(taskEntity.getUserEntity() , UserDTO.class));
             return taskDTO;
