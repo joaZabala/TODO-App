@@ -46,4 +46,9 @@ public class TaskController {
     public ResponseEntity<List<TaskDTO>>getTasksBetweenDates(@RequestParam LocalDate startsDate, @RequestParam LocalDate dueDate){
         return ResponseEntity.ok(taskService.taskByDueDateBetween(startsDate, dueDate));
     }
+
+    @PutMapping("/update")
+    public ResponseEntity<TaskDTO>updateTask(@RequestBody TaskRequest taskRequest , @RequestParam Long taskId){
+        return ResponseEntity.ok(taskService.updateTask(taskRequest , taskId));
+    }
 }

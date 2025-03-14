@@ -83,4 +83,6 @@ public class UserServiceImpl implements UserService {
     public UserEntity findById(Long id) {
         return userRepository.findById(id).get();
     }
+
+    //TODO recuperar contraseña por email o por username
 }
