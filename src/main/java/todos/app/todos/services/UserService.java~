@@ -1,0 +1,13 @@
+package todos.app.todos.services;
+
+import org.springframework.stereotype.Service;
+import todos.app.todos.DTOs.LoginDto;
+import todos.app.todos.DTOs.Register.UserRegisterDTO;
+import todos.app.todos.entities.UserEntity;
+@Service
+public interface UserService {
+
+    LoginDto login(String emailOrUserName, String password);
+
+    UserEntity register(UserRegisterDTO userRegisterDTO);
+}
