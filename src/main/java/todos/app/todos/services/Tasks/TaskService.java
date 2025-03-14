@@ -21,4 +21,6 @@ public interface TaskService {
     List<TaskDTO> taskByDueDate(LocalDate dueDate);
     List<TaskDTO> taskByDueDateBetween(LocalDate startDate , LocalDate dueDate);
 
+    TaskDTO updateTask(TaskRequest taskRequest , Long taskId);
+
 }
